@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A8F17D9D-94BE-D8A8-BDD7-C650A9030E37}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CyanoSim</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>bin\Debug\</OutDir>
+    <IntDir>obj\Debug\</IntDir>
+    <TargetName>CyanoSim</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>bin\Release\</OutDir>
+    <IntDir>obj\Release\</IntDir>
+    <TargetName>CyanoSim</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>SFML_STATIC;DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Dependencies\SFML\include;..\Dependencies\ImGui;..\Dependencies\ImGui-SFML;..\Dependencies\tinyfiledialogs;..\Dependencies\escapi;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-main-d.lib;sfml-audio-s-d.lib;sfml-graphics-s-d.lib;sfml-network-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;flac.lib;freetype.lib;ogg.lib;openal32.lib;opengl32.lib;vorbis.lib;vorbisenc.lib;vorbisfile.lib;winmm.lib;gdi32.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Dependencies\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Dependencies\SFML\include;..\Dependencies\ImGui;..\Dependencies\ImGui-SFML;..\Dependencies\tinyfiledialogs;..\Dependencies\escapi;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-main.lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;flac.lib;freetype.lib;ogg.lib;openal32.lib;opengl32.lib;vorbis.lib;vorbisenc.lib;vorbisfile.lib;winmm.lib;gdi32.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Dependencies\SFML\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Cyanotype.h" />
+    <ClInclude Include="src\Resources.h" />
+    <ClInclude Include="src\Simulator.h" />
+    <ClInclude Include="src\Colors.h" />
+    <ClInclude Include="src\escapi\escapi.h" />
+    <ClInclude Include="src\States\State.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Cyanotype.cpp" />
+    <ClCompile Include="src\Program.cpp" />
+    <ClCompile Include="src\Simulator.cpp" />
+    <ClCompile Include="src\Colors.cpp" />
+    <ClCompile Include="src\escapi\escapi.cpp" />
+    <ClCompile Include="src\imgui\imgui-SFML.cpp" />
+    <ClCompile Include="src\imgui\imgui.cpp" />
+    <ClCompile Include="src\imgui\imgui_demo.cpp" />
+    <ClCompile Include="src\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\States\AboutInfoState.cpp" />
+    <ClCompile Include="src\States\FinalResultState.cpp" />
+    <ClCompile Include="src\States\ImageBathState.cpp" />
+    <ClCompile Include="src\States\MainMenuState.cpp" />
+    <ClCompile Include="src\States\MixSolutionsState.cpp" />
+    <ClCompile Include="src\States\PaintSheetState.cpp" />
+    <ClCompile Include="src\States\RunToEndState.cpp" />
+    <ClCompile Include="src\States\SelectPictureState.cpp" />
+    <ClCompile Include="src\States\State.cpp" />
+    <ClCompile Include="src\States\UVExposureState.cpp" />
+    <ClCompile Include="src\tinyfiledialogs\tinyfiledialogs.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="assets\brush stroke.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\drying rack.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\empty beaker.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\fac bottle.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\flowers.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\glass pane.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\h2o2 container.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\old paper.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\paintbrush.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\pfc bottle.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\spotlight off.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\spotlight on.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\water container.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+    <Image Include="assets\wooden board.png">
+      <DeploymentContent>true</DeploymentContent>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="assets\Montserrat-Regular.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+    <Font Include="assets\Montserrat-SemiBold.ttf">
+      <DeploymentContent>true</DeploymentContent>
+    </Font>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
