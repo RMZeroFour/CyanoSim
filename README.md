@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/DevChrome/CyanoSim">
-    <img alt="Screenshot 1" src="./screenshots/image0.png">
+    <img alt="Screenshot 1" src="./Screenshots/image0.png">
   </a>
 
 <h3 align="center">Cyanotype Simulator</h3>
@@ -73,9 +73,9 @@ To get this project running locally from source, follow these steps:
 
 <!-- USAGE EXAMPLES -->
 ## Screenshots
-![Screenshot 2](./screenshots/image1.png)
-![Screenshot 3](./screenshots/image2.png)
-![Screenshot 4](./screenshots/image3.png)
+![Screenshot 2](./Screenshots/image1.png)
+![Screenshot 3](./Screenshots/image2.png)
+![Screenshot 4](./Screenshots/image3.png)
 
 <!-- LICENSE -->
 ## License
