@@ -7,7 +7,7 @@
     <img alt="Screenshot 1" src="./Screenshots/image0.png">
   </a>
 
-<h3 align="center">Cyanotype Simulator</h3>
+  <h1 align="center">Cyanotype Simulator</h1>
 
   <p align="center">
     A simulation tool for creating beautiful cyanotypes from regular images
